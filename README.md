@@ -8,7 +8,7 @@ Build the project and install the add-on locally:
 mvn clean install
 ```
 mvn jetty:run
-```
+
 
 This deploys demo at http://localhost:8080
 
