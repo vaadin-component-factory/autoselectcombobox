@@ -27,4 +27,4 @@ Create a new component AutoSelectComboBox and use it like a Combobox.
 
 ## Missing features or bugs
 
-You can report any issue or missing feature on github: https://github.com/vaadin-component-factory/autoselectcombobox
+You can report any issue or missing feature on github: https://github.com/vaadin-component-factory/autoselect-combobox
