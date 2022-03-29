@@ -1,0 +1,41 @@
+:host {
+  display: flex !important;
+  flex-grow: 0;
+  flex-shrink: 1;
+  align-items: center;
+}
+
+[part='separator'] {
+  margin: var(--lumo-space-wide-s);
+}
+
+[part='separator']::after {
+  content: '›';
+}
+
+@media screen and (max-width: 800px) {
+  :host([shift]) {
+  }
+
+  :host([shift]) [part="link"] #link #pageLabel {
+    display: inline;
+    font-size: 0;
+    transition: 100ms;
+  }
+  :host([shift]:hover) [part="link"] #link #pageLabel {
+    display: inline;
+    font-size: 1rem;
+    transition: 100ms;
+  }
+  :host([shift]) [part="link"] #link:after {
+    content: "...";
+    font-size: 1rem;
+    display: inline;
+    transition: 100ms;
+  }
+  :host([shift]:hover) [part="link"] #link:after {
+    font-size: 0;
+    transition: 100ms;
+  }
+
+}

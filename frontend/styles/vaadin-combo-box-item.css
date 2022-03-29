@@ -1,0 +1,5 @@
+:host span[disabled] {
+    color: var(--lumo-tertiary-text-color);
+    margin-left: -1rem;
+}
+

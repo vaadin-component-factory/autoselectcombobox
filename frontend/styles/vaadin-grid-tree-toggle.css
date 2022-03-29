@@ -1,0 +1,18 @@
+[part="toggle"] {
+    color: var(--_tree-grid-toggle-color);
+}
+
+:host(:hover) [part="toggle"] {
+    color: var(--_tree-grid-toggle-color-hover);
+}
+
+:host([theme~="sum"]) {
+    max-width: 100%;
+}
+
+:host([theme~="sum"]) ::slotted(span) {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

@@ -1,0 +1,27 @@
+:host {
+  --synneo-dialog-horizontal-space: var(--lumo-space-l);
+  --synneo-dialog-vertical-space: var(--lumo-space-s);
+  --synneo-dialog-footer-color: lightblue;
+}
+
+[part="content"] .header {
+  padding-top: var(--lumo-space-m);
+  padding-right: var(--synneo-dialog-horizontal-space);
+  padding-bottom: var(--lumo-space-m);
+  padding-left: var(--synneo-dialog-horizontal-space);
+}
+
+[part="content"] .content {
+  padding-top: var(--synneo-dialog-vertical-space);
+  padding-right: var(--synneo-dialog-horizontal-space);
+  padding-bottom: var(--synneo-dialog-vertical-space);
+  padding-left: var(--synneo-dialog-horizontal-space);
+}
+
+[part="content"] .footer {
+  padding-top: var(--synneo-dialog-vertical-space);
+  padding-right: var(--synneo-dialog-horizontal-space);
+  padding-bottom: var(--synneo-dialog-vertical-space);
+  padding-left: var(--synneo-dialog-horizontal-space);
+  background-color: var(--synneo-dialog-footer-color);
+}

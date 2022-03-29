@@ -1,0 +1,10 @@
+.empty-message {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    height: var(--lumo-size-m);
+    padding: 0 var(--lumo-space-m);
+    position: absolute;
+    top: calc(var(--lumo-size-xl) + 1px);
+    width: 100%;
+}

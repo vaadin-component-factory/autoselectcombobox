@@ -1,0 +1,9 @@
+org/vaadin/addons/autoselectcombobox/PersonData.class
+org/vaadin/addons/autoselectcombobox/TestBean.class
+org/vaadin/addons/autoselectcombobox/MaritalStatus.class
+org/vaadin/addons/autoselectcombobox/Address.class
+org/vaadin/addons/autoselectcombobox/PersonService.class
+org/vaadin/addons/autoselectcombobox/Person.class
+org/vaadin/addons/autoselectcombobox/ComboBoxEnhancer.class
+org/vaadin/addons/autoselectcombobox/ComboBoxValidation.class
+org/vaadin/addons/autoselectcombobox/AbstractDemo.class

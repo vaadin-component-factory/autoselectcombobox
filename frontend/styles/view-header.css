@@ -1,0 +1,78 @@
+.view {
+  background-color: white;
+}
+
+.toolbar {
+  background-color: var(--lumo-contrast-10pct);
+  padding: var(--lumo-space-xs) var(--lumo-space-m);
+  box-sizing: border-box;
+}
+
+.toolbar > * {
+  margin-right: var(--lumo-space-s);
+}
+
+.title-bar {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: var(--lumo-space-xs) var(--lumo-space-m);
+  background-color: var(--color-primary-800);
+  color: white;
+  border-top-left-radius: 12px;
+}
+
+.title-bar label {
+  padding-right: var(--lumo-space-s);
+}
+.title-bar label:last-of-type {
+  padding-right: 0;
+  font-weight: 600;
+}
+.title-bar label:not(:last-of-type)::after {
+  content: "›";
+  display: inline-block;
+  padding-left: var(--lumo-space-s);
+  opacity: .6;
+}
+
+vaadin-details.header {
+  width: 100%;
+  padding: 0 var(--lumo-space-m);
+  box-sizing: border-box;
+}
+
+vaadin-details.header .header-summary {
+  align-items: baseline;
+}
+
+vaadin-details.header .header-summary h3 {
+  margin: 0;
+  padding-right: var(--lumo-space-l);
+}
+
+vaadin-details.header .header-summary label {
+  opacity: 1;
+  transition: 250ms;
+}
+
+vaadin-details.header[opened] .header-summary label {
+  opacity: 0;
+}
+
+vaadin-details.header synneo-layout {
+  --_synneo-layout-gutter: 2rem;
+}
+
+vaadin-details > * {
+  animation: 250ms expand-details;
+}
+
+@keyframes expand-details {
+  0% {
+    max-height: 0px;
+  }
+  100% {
+    max-height: 100vh;
+  }
+}

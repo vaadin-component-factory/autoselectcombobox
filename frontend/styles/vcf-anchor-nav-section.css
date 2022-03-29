@@ -1,0 +1,4 @@
+:host {
+  --anchor-nav-section-border-width: 1px;
+  --anchor-nav-section-border-color: var(--lumo-contrast-60pct);
+}

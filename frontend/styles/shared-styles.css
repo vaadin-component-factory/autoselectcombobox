@@ -1,0 +1,330 @@
+/* AKDB colors */
+html {
+  --color-primary-main: #00A1E0;
+  --color-primary-900: #005D98;
+  --color-primary-800: #007DB9;
+  --color-primary-700: #008ECD;
+  --color-primary-600: #00A1E0;
+  --color-primary-500: #09AFEF;
+  --color-primary-400: #30BBF0;
+  --color-primary-300: #54C7F1;
+  --color-primary-200: #83D7F5;
+  --color-primary-100: #B4E7F9;
+  --color-primary-50: #E1F6FD;
+  --color-secondary-main: #0A2860;
+  --color-secondary-1000: #061736;
+  --color-secondary-900: #0A2860;
+  --color-secondary-800: #163877;
+  --color-secondary-700: #1E4283;
+  --color-secondary-600: #274B8F;
+  --color-secondary-500: #2E5398;
+  --color-secondary-400: #506CA5;
+  --color-secondary-300: #7086B4;
+  --color-secondary-200: #98A7CA;
+  --color-secondary-100: #C0CADF;
+  --color-secondary-50: #E6EAF2;
+
+  --synneo-material-icon-font: 'Material Icons Outlined', 'Material Icons';
+  --synneo-label-text-color: var(--lumo-secondary-text-color);
+  --synneo-label-font-size: var(--lumo-font-size-s);
+  --synneo-label-space-below: 0.5em;
+
+  --synneo-size-size-xs: 1rem;
+  --synneo-size-breakpoint-s: 768px; /* Max screen width 48 rem = 768px */
+  --synneo-size-breakpoint-m: 1128px; /* Max screen width 70,5 rem = 1128px */
+  --synneo-size-breakpoint-l: 1600px; /* Not used */
+}
+
+/* Lumo variables */
+html {
+  --lumo-font-family: "Segoe UI", "Open Sans", calibri, arial, sans-serif;
+  --lumo-font-size-xl: 1.25rem;
+  --lumo-font-size-xxl: 1.375rem;
+  --lumo-font-size-xxxl: 1.5rem;
+  --lumo-primary-text-color: var(--color-primary-900);
+  --lumo-primary-color-50pct: rgba(0, 161, 224, 0.5);
+  --lumo-primary-color-10pct: rgba(0, 161, 224, 0.1);
+  --lumo-primary-color: var(--color-primary-main);
+  --lumo-header-text-color: rgba(0, 0, 0, 0.87);
+  --lumo-body-text-color: rgba(0, 0, 0, 0.87);
+  --lumo-disabled-text-color: rgba(0, 0, 0, 0.38);
+  --lumo-secondary-text-color: rgba(0, 0, 0, 0.68);
+  --lumo-tertiary-text-color: rgba(0, 0, 0, 0.5);
+
+  --vaadin-charts-color-0: #003A6D;
+  --vaadin-charts-color-1: #00A1E0;
+  --vaadin-charts-color-2: #F1C21B;
+  --vaadin-charts-color-3: #EB6200;
+  --vaadin-charts-color-4: #42BE65;
+  --vaadin-charts-color-5: #8D8D8D;
+  --vaadin-charts-color-6: #3DDBD9;
+  --vaadin-charts-color-7: #BE95FF;
+  --vaadin-charts-color-8: #DA1E28;
+  --vaadin-charts-color-9: #198038;
+
+  --vaadin-charts-color-0-0: #00A1E0;
+  --vaadin-charts-color-0-1: #007BBD;
+  --vaadin-charts-color-0-2: #00539A;
+
+  --vaadin-charts-color-1-0: #A3DDF4;
+  --vaadin-charts-color-1-1: #6DC9ED;
+  --vaadin-charts-color-1-2: #36B5E7;
+
+  --vaadin-charts-color-2-0: #FCF4D6;
+  --vaadin-charts-color-2-1: #FDDC69;
+  --vaadin-charts-color-2-2: #F1C21B;
+
+  --vaadin-charts-color-3-0: #FF832B;
+  --vaadin-charts-color-3-1: #EB6200;
+  --vaadin-charts-color-3-2: #BA4E00;
+
+  --vaadin-charts-color-4-0: #6FDC8C;
+  --vaadin-charts-color-4-1: #42BE65;
+  --vaadin-charts-color-4-2: #24A148;
+
+  --vaadin-charts-color-5-0: #A8A8A8;
+  --vaadin-charts-color-5-1: #8D8D8D;
+  --vaadin-charts-color-5-2: #6F6F6F;
+
+  --vaadin-charts-color-6-0: #9EF0F0;
+  --vaadin-charts-color-6-1: #3DDBD9;
+  --vaadin-charts-color-6-2: #08BDBA;
+
+  --vaadin-charts-color-7-0: #D4BBFF;
+  --vaadin-charts-color-7-1: #BE95FF;
+  --vaadin-charts-color-7-2: #8A3FFC;
+
+  --vaadin-charts-color-8-0: #FA4D56;
+  --vaadin-charts-color-8-1: #DA1E28;
+  --vaadin-charts-color-8-2: #A2191F;
+
+  --vaadin-charts-color-9-0: #198038;
+  --vaadin-charts-color-9-1: #0E6027;
+  --vaadin-charts-color-9-2: #044317;
+}
+
+
+vaadin-form-layout {
+  --vaadin-form-layout-column-spacing: 1em;
+  --vaadin-form-item-row-spacing: 1em;
+}
+
+/* Tooltip public scope */
+vcf-tooltip > * {
+  margin: 0;
+}
+
+vcf-tooltip h5 {
+  font-size: var(--lumo-font-size-xs);
+  padding-bottom: var(--lumo-space-xs);
+}
+
+/* Info icons */
+iron-icon[slot="helper"] {
+  color: var(--color-secondary-main);
+  width: .75rem;
+  height: .75rem;
+}
+iron-icon[slot="helper"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--lumo-primary-color-50pct);
+  border-radius: 50%;
+}
+
+vaadin-button[theme="tertiary-inline icon"][slot="helper"] {
+  width: max-content;
+  color: var(--color-secondary-main);
+}
+[slot="helper"] h5 {
+  margin: 0;
+}
+
+body {
+  height: auto;
+}
+
+legend {
+  font-size: var(--lumo-font-size-xl);
+  font-weight: 600;
+  line-height: var(--lumo-line-height-xs);
+  margin-top: 1.25em;
+  margin-bottom: 0.5em;
+  padding-left: 0;
+  color: var(--lumo-header-text-color);
+}
+
+/* Reset default fieldset styles */
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.demo-view {
+  display: flex;
+  flex-direction: row;
+  margin-left: 0;
+  margin-right: 0;
+  max-width: none;
+  height: 100vh;
+  background: var(--lumo-shade-5pct);
+}
+.demo-view > div {
+  padding: 0 4rem;
+  width: 100%;
+  max-width: calc(100% - 200px);
+  box-sizing: border-box;
+  overflow: auto;
+}
+.demo-view > div.no-padding {
+  padding: 0;
+}
+
+.demo-view .demo-content {
+  width: calc(100% - 200px);
+  overflow: auto;
+}
+
+.demo-menu {
+  flex: 0 0 auto;
+  min-height: 100vh;
+  background: var(--lumo-base-color);
+  overflow: auto;
+}
+
+.demo-menu hr {
+  margin-top: 1.5rem;
+}
+
+.demo-menu span {
+  font-size: var(--lumo-font-size-s);
+  font-weight: 600;
+}
+
+.component-card {
+  background: var(--lumo-base-color);
+  overflow: auto;
+}
+
+.component-card vaadin-horizontal-layout {
+  flex-wrap: wrap;
+}
+
+.info-element {
+  background-color: #afe1ff;
+}
+
+.helper-section {
+  flex: 0 1 auto;
+  background-color: var(--color-primary-100);
+  padding: 2em;
+  margin-bottom: 2em;
+  align-self: flex-start;
+}
+
+.view-content {
+  flex: 1 1 auto;
+  width: 100%;
+  height: 100%;
+}
+.view-toolbar {
+  flex: 0 0 auto;
+}
+
+.helper-paragraph {
+  color: var(--lumo-secondary-text-color);
+  font-size: var(--lumo-font-size-s);
+}
+
+.demo-block {
+  padding: var(--lumo-space-s);
+  text-align: center;
+  background-color: white;
+  border: 1px solid var(--lumo-contrast-10pct);
+}
+
+vaadin-button.action-button ~ vcf-tooltip {
+  right: 30px !important;
+}
+
+.highlight {
+  display: inline-flex;
+  align-items: center;
+}
+
+.highlight iron-icon {
+  width: var(--lumo-font-size-m);
+  height: var(--lumo-font-size-m);
+  margin-right: var(--lumo-space-xs);
+}
+
+.highlight.green {
+  color: var(--lumo-success-text-color);
+}
+
+.highlight.red {
+  color: var(--lumo-error-text-color);
+}
+
+.kpi-facet label {
+  font-size: var(--lumo-font-size-xl);
+  font-weight: 600;
+}
+
+vaadin-combo-box[readonly] .add-button,
+vaadin-combo-box[disabled] .add-button {
+  display: none;
+}
+
+.ellipsis-button {
+  font-weight: 600;
+  padding: 0 var(--lumo-space-s);
+  border-radius: var(--lumo-border-radius);
+}
+
+.ellipsis-button:hover {
+  text-decoration: none;
+  background-color: var(--lumo-primary-color-10pct);
+}
+
+/* Tooltip used in MenuBar items */
+vaadin-context-menu-item[focused] > .fake-tooltip-wrapper .fake-tooltip,
+vaadin-context-menu-item:hover > .fake-tooltip-wrapper .fake-tooltip,
+.fake-tooltip-wrapper:hover .fake-tooltip {
+  opacity: 1;
+}
+
+.fake-tooltip-wrapper .fake-tooltip {
+  opacity: 0;
+  transition: 500ms;
+  pointer-events: none;
+  position: fixed;
+  font-size: var(--lumo-font-size-xs);
+  color: var(--lumo-body-text-color);
+  border-radius: var(--lumo-border-radius);
+  background-color: var(--lumo-base-color);
+  padding: calc(var(--lumo-size-m) / 6) calc(var(--lumo-size-m) / 4);
+  box-shadow: 0 1px 4px -1px var(--lumo-shade-20pct);
+}
+
+.item-with-shortcut .item-shortcut {
+  color: var(--lumo-tertiary-text-color);
+  padding-left: var(--lumo-space-l);
+}
+
+.separator-item {
+  color: var(--lumo-tertiary-text-color);
+  line-height: 2;
+  padding-left: var(--lumo-space-s);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}

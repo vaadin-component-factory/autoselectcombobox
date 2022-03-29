@@ -1,0 +1,8 @@
+@import url("required-field.css");
+
+:host([theme="readonly"]) ::slotted(vaadin-checkbox[disabled][checked]) {
+    --lumo-contrast-10pct: var(--lumo-primary-color-50pct);
+    --lumo-contrast-30pct: var(--lumo-primary-contrast-color);
+    color: var(--lumo-body-text-color);
+}
+

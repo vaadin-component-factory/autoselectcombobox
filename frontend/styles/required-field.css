@@ -1,0 +1,19 @@
+:host {
+    --required-marker-size: 3px;
+}
+
+:host([required]) [part="label"]::after {
+    opacity: 1;
+    content: "";
+    display: block;
+    top: calc( ( var(--lumo-font-size-s) / 2 ) - ( var(--required-marker-size) / 2 ) );
+    right: var(--lumo-space-xs);
+    width: var(--required-marker-size);
+    height: var(--required-marker-size);
+    border-radius: var(--required-marker-size);
+    background-color: var(--lumo-primary-color);
+}
+
+:host([required][invalid]) [part="label"]::after {
+    background-color: var(--lumo-error-text-color);
+}

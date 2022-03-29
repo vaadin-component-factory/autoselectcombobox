@@ -1,0 +1,103 @@
+/* FROZEN COLUMNS */
+:host {
+    --synneo-icon-button-width: 2rem;
+    --synneo-fixed-border: inset 1px 0 0 var(--lumo-contrast-20pct);
+}
+
+/* FIXED */
+:host([theme~="frozen-right"]) {
+    overflow: hidden;
+}
+
+:host([theme~="frozen-right"]) [part~="body-cell"][frozen]:not([first-column]) ::slotted(vaadin-grid-cell-content) {
+    padding-left: var(--lumo-space-xs);
+    padding-right: var(--lumo-space-xs);
+}
+
+:host([theme~="frozen-right"]) [part~="header-cell"][frozen]:not([first-column]) ::slotted(vaadin-grid-cell-content) {
+    padding-left: var(--lumo-space-s);
+    padding-right: var(--lumo-space-s);
+}
+
+:host([theme~="frozen-right"]) [last-frozen] {
+    border-right: none;
+}
+
+:host([theme="frozen-right"]) [frozen]:not([first-column]) {
+    width: var(--synneo-icon-button-width) !important;
+}
+
+/* 1 inline button */
+:host([frozen-col="1"]) [part~="cell"].placeholder {
+    width: var(--synneo-icon-button-width) !important;
+}
+
+:host([frozen-col="1"]) [last-column] {
+    position: fixed;
+    right: 0;
+    width: var(--synneo-icon-button-width) !important;
+    z-index: 2;
+    box-shadow: var(--synneo-fixed-border);
+}
+
+/* 2 inline buttons */
+:host([frozen-col="2"]) [part~="cell"].placeholder {
+    width: calc(var(--synneo-icon-button-width) * 2) !important;
+}
+
+:host([frozen-col="2"]) [frozen][part~="header-cell"]:not([first-column]) {
+    width: calc(var(--synneo-icon-button-width) * 2) !important;
+    right: 0 !important;
+}
+
+:host([frozen-col="2"]) [frozen][part~="header-cell"]:not([first-column]) ~ [frozen] {
+    width: 0 !important;
+}
+
+:host([frozen-col="2"]) [frozen]:not([first-column]) {
+    position: fixed;
+    right: var(--synneo-icon-button-width);
+    z-index: 2;
+    box-shadow: var(--synneo-fixed-border);
+}
+
+:host([frozen-col="2"]) [frozen]:not([first-column]) ~ [frozen] {
+    position: fixed;
+    right: 0;
+    box-shadow: none;
+}
+
+/* 3 inline buttons */
+:host([frozen-col="3"]) [part~="cell"].placeholder {
+    width: calc(var(--synneo-icon-button-width) * 3) !important;
+}
+
+
+:host([frozen-col="3"]) [frozen][part~="header-cell"]:not([first-column]) {
+    width: calc(var(--synneo-icon-button-width) * 3) !important;
+    right: 0 !important;
+}
+
+:host([frozen-col="3"]) [frozen][part~="header-cell"]:not([first-column]) ~ [frozen],
+:host([frozen-col="3"]) [frozen][part~="header-cell"]:not([first-column]) ~ [frozen] ~ [frozen] {
+    width: 0 !important;
+}
+
+:host([frozen-col="3"]) [frozen]:not([first-column]) {
+    position: fixed;
+    right: calc(var(--synneo-icon-button-width) * 2);
+    z-index: 2;
+    box-shadow: var(--synneo-fixed-border);
+}
+
+:host([frozen-col="3"]) [frozen]:not([first-column]) ~ [frozen] {
+    position: fixed;
+    right: var(--synneo-icon-button-width);
+    box-shadow: none;
+}
+
+:host([frozen-col="3"]) [frozen]:not([first-column]) ~ [frozen] ~ [frozen] {
+    position: fixed;
+    right: 0;
+    box-shadow: none;
+}

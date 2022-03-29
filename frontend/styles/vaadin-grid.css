@@ -1,0 +1,84 @@
+:host([theme~="multiselect-tree"]) {
+    --vaadin-grid-tree-toggle-level-offset: 2em;
+    --_tree-grid-toggle-color: var(--lumo-contrast-50pct);
+    --_tree-grid-toggle-color-hover: var(--lumo-contrast-80pct);
+}
+:host([theme~="multiselect-tree"]) [part="row"] [first-column] {
+    width: 2em !important;
+}
+:host([theme~="multiselect-tree"]) [part="row"] [first-column] ::slotted(vaadin-grid-cell-content) {
+    padding: var(--lumo-space-xs) 0 var(--lumo-space-xs) var(--lumo-space-s);
+    z-index: 3;
+}
+:host([theme~="multiselect-tree"]) [part="row"][aria-level="2"] [first-column] ::slotted(vaadin-grid-cell-content) {
+    transform: translateX(calc(1 * var(--vaadin-grid-tree-toggle-level-offset)));
+}
+:host([theme~="multiselect-tree"]) [part="row"][aria-level="3"] [first-column] ::slotted(vaadin-grid-cell-content) {
+    transform: translateX(calc(2 * var(--vaadin-grid-tree-toggle-level-offset)));
+}
+:host([theme~="multiselect-tree"]) [part="row"][aria-level="4"] [first-column] ::slotted(vaadin-grid-cell-content) {
+    transform: translateX(calc(3 * var(--vaadin-grid-tree-toggle-level-offset)));
+}
+:host([theme~="multiselect-tree"]) [part="row"][aria-level="5"] [first-column] ::slotted(vaadin-grid-cell-content) {
+    transform: translateX(calc(4 * var(--vaadin-grid-tree-toggle-level-offset)));
+}
+:host([theme~="multiselect-tree"]) [part="row"][aria-level="6"] [first-column] ::slotted(vaadin-grid-cell-content) {
+    transform: translateX(calc(5 * var(--vaadin-grid-tree-toggle-level-offset)));
+}
+:host([theme~="multiselect-tree"]) [aria-level="1"] {
+    --_tree-grid-toggle-color: red;
+    --_tree-grid-toggle-color-hover: green;
+}
+
+:host([theme~="no-header-cell"]) [part~="header-cell"] {
+        display: none !important;
+}
+
+[part~="cell"][first-column].no-selection ::slotted(vaadin-grid-cell-content){
+    display: none;
+}
+[part~="cell"][first-column].disabled ::slotted(vaadin-grid-cell-content){
+    pointer-events: none;
+    opacity: .4;
+}
+:host([theme~="highlight-row-on-hover"]) [part~="row"]:hover [part~="body-cell"] {
+    background: var(--lumo-shade-5pct);
+}
+
+[part~="cell"].action ::slotted(vaadin-grid-cell-content) {
+    padding-left: var(--lumo-space-xs);
+    padding-right: var(--lumo-space-xs);
+}
+
+[part~="cell"][first-column][frozen] {
+    box-shadow: inset -1px 0 0 var(--lumo-contrast-20pct);
+}
+
+/* Hide unnecessary footer row */
+:host([theme="hide-empty-footer"]) tfoot [part="row"]:first-child {
+    display: none;
+}
+
+/* === Summing table === */
+:host([theme~="sum"]) {
+
+}
+:host([theme~="sum"]) [part~="body-cell"].progress-bar ::slotted(vaadin-grid-cell-content) {
+    background-color: var(--lumo-base-color);
+    height: 100%;
+    padding-bottom: 0;
+    padding-top: 0;
+}
+:host([theme~="sum"]) [part~="body-cell"].parent {
+    background-color: var(--lumo-contrast-5pct);
+}
+:host([theme~="sum"]) [part~="body-cell"][first-column].parent {
+    color: var(--lumo-primary-text-color);
+}
+:host([theme~="sum"]) [part~="header-cell"][last-column] ::slotted(vaadin-grid-cell-content){
+    height: 100%;
+}
+/* === Disabled === */
+:host([disabled]) {
+    opacity: 0.5;
+}

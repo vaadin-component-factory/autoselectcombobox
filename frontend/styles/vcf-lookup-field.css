@@ -1,0 +1,21 @@
+/* Lookup Field integrated theme variant */
+:host([theme="integrated"]) .container {
+    align-items: flex-end;
+}
+
+:host([theme="integrated"]) ::slotted(vaadin-combo-box) {
+}
+
+:host([theme="integrated"]) .search-button {
+    margin-left: 0;
+    --lumo-border-radius: 0 var(--lumo-border-radius-s) var(--lumo-border-radius-s) 0;
+    border: 2px solid var(--color-primary-main);
+    border-left-width: 0;
+    background-color: var(--lumo-base-color);
+    padding: 0;
+}
+
+:host([theme="integrated"]) .search-button[focus-ring] {
+    border-color: var(--color-secondary-900);
+    box-shadow: -2px 0px 0px 0px var(--color-secondary-900);
+}

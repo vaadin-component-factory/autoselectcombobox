@@ -1,0 +1,6 @@
+@import url("required-field.css");
+
+/* Lookup Field integrated theme variant */
+:host([theme="integrated"]) [part="toggle-button"] {
+    display: none;
+}

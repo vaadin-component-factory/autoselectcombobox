@@ -1,0 +1,66 @@
+.flex {
+    --offset: 50%;
+    --offset-scale: .5;
+    --bar-positive-color: var(--vaadin-charts-color-1);
+    --bar-negative-color: var(--vaadin-charts-color-3);
+    --bar-height: 0.625rem;
+    --bar-divider-color: var(--lumo-contrast-20pct);
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.flex.pos {
+    transform: translatex(var(--offset)) scalex(var(--offset-scale));
+    transform-origin: left;
+}
+
+.flex::before {
+    content: "";
+    width: 1px;
+    height: 100%;
+    background-color: var(--bar-divider-color);
+}
+
+.flex.pos .bar {
+    background-color: var(--bar-positive-color);
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.flex.neg {
+    transform: translatex(calc(-100% + var(--offset))) scalex(var(--offset-scale));
+    transform-origin: right;
+    flex-direction: row-reverse;
+}
+
+.flex.neg .bar {
+    background-color: var(--bar-negative-color);
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.flex .bar {
+    border-radius: calc(var(--bar-height) / 2);
+    height: var(--bar-height);
+}
+
+.zero-indicator {
+    color: rgba(0,0,0,0);
+    display: block;
+    height: 100%;
+    position: relative;
+}
+
+.zero-indicator::before {
+    bottom: 0;
+    color: var(--lumo-body-text-color);
+    content: "0";
+    left: var(--offset);
+    margin-left: calc(var(--lumo-size-s) / -2);
+    position: absolute;
+    text-align: center;
+    width: var(--lumo-size-s);
+}

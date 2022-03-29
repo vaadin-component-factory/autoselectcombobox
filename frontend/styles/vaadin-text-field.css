@@ -1,0 +1,153 @@
+@import url("required-field.css");
+
+:host [part="label"] {
+  color: var(--lumo-tertiary-text-color);
+}
+
+:host [part="input-field"] {
+  box-shadow:inset 0 0 0 2px var(--color-primary-main);
+  background-color:var(--lumo-base-color);
+}
+
+:host(:hover) [part="input-field"] {
+  box-shadow:inset 0 0 0 2px var(--color-primary-900);
+  background-color:var(--lumo-base-color);
+}
+
+:host [part="input-field"]:after {
+  background-color: var(--lumo-base-color);
+}
+:host(:hover) [part="input-field"]:after {
+  background-color: var(--lumo-base-color);
+}
+
+
+/* Focus styles */
+:host([focused]:not([readonly])) [part="label"] {
+  color: var(--lumo-body-text-color);
+}
+
+:host([focused]) [part="input-field"] {
+  box-shadow:inset 0 0 0 2px var(--color-secondary-main);
+}
+
+:host([focused]:hover) [part="input-field"] {
+  box-shadow: inset 0 0 0 2px var(--color-secondary-900);
+}
+
+:host([focus-ring]) [part="label"] {
+  font-weight: bold;
+}
+
+:host([focus-ring]) [part="input-field"] {
+  box-shadow: 0 0 0 2px var(--color-secondary-main);
+}
+
+:host([focus-ring]:hover) [part="input-field"] {
+  box-shadow: 0 0 0 2px var(--color-secondary-900);
+}
+
+
+/* Invalid styles */
+:host([invalid]) [part="label"] {
+  color: var(--lumo-error-text-color) !important;
+  font-weight: bold;
+}
+
+:host([invalid]) [part="input-field"] {
+  box-shadow:inset 0 0 0 1px var(--lumo-error-color);
+  background-color: var(--lumo-error-color-10pct);
+}
+
+:host([invalid][focus-ring]) [part="input-field"] {
+  box-shadow: 0 0 0 2px var(--color-secondary-main);
+}
+
+
+/* Read only styles */
+:host([readonly]) [part="input-field"] {
+  box-shadow:inset 0 0 0 1px var(--lumo-contrast-10pct);
+}
+
+:host([readonly][focus-ring]) [part="label"] {
+  color: var(--lumo-secondary-text-color);
+}
+
+:host([readonly][focus-ring]) [part="input-field"] {
+  box-shadow: 0 0 0 1px var(--lumo-contrast-60pct);
+}
+
+:host([readonly][focus-ring]) [part="input-field"]::after {
+  border: 1px solid var(--lumo-contrast-60pct);
+}
+
+:host([readonly]) [part="input-field"]::after {
+  border: 1px solid var(--lumo-contrast-10pct);
+}
+
+:host([readonly]:hover) [part="input-field"]::after {
+  border: 1px solid var(--lumo-contrast-10pct);
+  background-color: transparent;
+}
+
+
+/* Disabled styles */
+:host([disabled]) [part="input-field"] {
+  box-shadow:inset 0 0 0 0px var(--lumo-contrast-10pct);
+}
+
+:host([disabled]) [part="label"] {
+  color: var(--lumo-tertiary-text-color);
+}
+
+/* Caption left styles */
+:host([theme="caption-left"]) {
+  width: auto;
+  --field-width: 360px;
+}
+:host([theme="caption-left"])::before {
+  content: none;
+}
+:host([theme="caption-left"]) .vaadin-text-field-container {
+  align-items: baseline;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+:host([theme="caption-left"]) [part="label"] {
+  align-self: auto;
+  margin-right: var(--lumo-space-s);
+  margin-left: 0;
+  padding-bottom: 0;
+  white-space: normal;
+  width: calc(25% - var(--lumo-space-s));
+}
+:host([theme="caption-left"]) [part="input-field"] {
+  max-width: var(--field-width);
+  width: 75%;
+}
+:host([theme="caption-left"][has-label]) {
+  padding-top: var(--lumo-space-xs);
+}
+
+:host([theme*="helper-aside"]) .vaadin-text-field-container {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+:host([theme*="helper-aside"]) [part="input-field"] {
+  width: 100%;
+}
+
+:host([theme*="helper-aside"]) [part="helper-text"] {
+  margin-left: var(--lumo-space-xs);
+}
+
+/* Lookup Field integrated theme variant */
+:host([theme="integrated"]) [part="input-field"] {
+  border-radius: var(--lumo-border-radius-s) 0 0 var(--lumo-border-radius-s);
+}
+
+:host([theme="integrated"][focus-ring]) [part="input-field"] {
+  box-shadow: inset 0 0 0 2px var(--color-secondary-900);
+}

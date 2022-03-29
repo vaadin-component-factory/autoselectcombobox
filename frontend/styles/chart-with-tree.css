@@ -1,0 +1,212 @@
+.tree-name-column::before {
+	border-bottom-left-radius: 50%;
+	border-bottom-right-radius: 50%;
+	border-top-left-radius: 50%;
+	border-top-right-radius: 50%;
+	color: rgba(0, 0, 0, 0);
+	content: "";
+	display: inline-block;
+	height: 12px;
+	width: 12px;
+	opacity: 1;
+	margin-right: 16px;
+}
+.tree-name-color-0::before {
+  background: var(--vaadin-charts-color-0);
+  color: var(--vaadin-charts-color-0);
+}
+
+.tree-name-color-0-0::before {
+    background: var(--vaadin-charts-color-0-0);
+    color: var(--vaadin-charts-color-0-0);
+}
+
+.tree-name-color-0-1::before {
+    background: var(--vaadin-charts-color-0-1);
+    color: var(--vaadin-charts-color-0-1);
+}
+
+.tree-name-color-0-2::before {
+    background: var(--vaadin-charts-color-0-2);
+    color: var(--vaadin-charts-color-0-2);
+}
+
+.tree-name-color-1::before {
+  background: var(--vaadin-charts-color-1);
+  color: var(--vaadin-charts-color-1);
+}
+
+.tree-name-color-1-0::before {
+    background: var(--vaadin-charts-color-1-0);
+    color: var(--vaadin-charts-color-1-0);
+}
+
+.tree-name-color-1-1::before {
+    background: var(--vaadin-charts-color-1-1);
+    color: var(--vaadin-charts-color-1-1);
+}
+
+.tree-name-color-1-2::before {
+    background: var(--vaadin-charts-color-1-2);
+    color: var(--vaadin-charts-color-1-2);
+}
+
+.tree-name-color-2::before {
+  background: var(--vaadin-charts-color-2);
+  color: var(--vaadin-charts-color-2);
+}
+
+.tree-name-color-2-0::before {
+    background: var(--vaadin-charts-color-2-0);
+    color: var(--vaadin-charts-color-2-0);
+}
+
+.tree-name-color-2-1::before {
+    background: var(--vaadin-charts-color-2-1);
+    color: var(--vaadin-charts-color-2-1);
+}
+
+.tree-name-color-2-2::before {
+    background: var(--vaadin-charts-color-2-2);
+    color: var(--vaadin-charts-color-2-2);
+}
+
+.tree-name-color-3::before {
+  background: var(--vaadin-charts-color-3);
+  color: var(--vaadin-charts-color-3);
+}
+
+.tree-name-color-3-0::before {
+    background: var(--vaadin-charts-color-3-0);
+    color: var(--vaadin-charts-color-3-0);
+}
+
+.tree-name-color-3-1::before {
+    background: var(--vaadin-charts-color-3-1);
+    color: var(--vaadin-charts-color-3-1);
+}
+
+.tree-name-color-3-2::before {
+    background: var(--vaadin-charts-color-3-2);
+    color: var(--vaadin-charts-color-3-2);
+}
+
+.tree-name-color-4::before {
+  background: var(--vaadin-charts-color-4);
+  color: var(--vaadin-charts-color-4);
+}
+
+.tree-name-color-4-0::before {
+    background: var(--vaadin-charts-color-4-0);
+    color: var(--vaadin-charts-color-4-0);
+}
+
+.tree-name-color-4-1::before {
+    background: var(--vaadin-charts-color-4-1);
+    color: var(--vaadin-charts-color-4-1);
+}
+
+.tree-name-color-4-2::before {
+    background: var(--vaadin-charts-color-4-2);
+    color: var(--vaadin-charts-color-4-2);
+}
+
+.tree-name-color-5::before {
+  background: var(--vaadin-charts-color-5);
+  color: var(--vaadin-charts-color-5);
+}
+
+.tree-name-color-5-0::before {
+    background: var(--vaadin-charts-color-5-0);
+    color: var(--vaadin-charts-color-5-0);
+}
+
+.tree-name-color-5-1::before {
+    background: var(--vaadin-charts-color-5-1);
+    color: var(--vaadin-charts-color-5-1);
+}
+
+.tree-name-color-5-2::before {
+    background: var(--vaadin-charts-color-5-2);
+    color: var(--vaadin-charts-color-5-2);
+}
+
+.tree-name-color-6::before {
+  background: var(--vaadin-charts-color-6);
+  color: var(--vaadin-charts-color-6);
+}
+
+.tree-name-color-6-0::before {
+    background: var(--vaadin-charts-color-6-0);
+    color: var(--vaadin-charts-color-6-0);
+}
+
+.tree-name-color-6-1::before {
+    background: var(--vaadin-charts-color-6-1);
+    color: var(--vaadin-charts-color-6-1);
+}
+
+.tree-name-color-6-2::before {
+    background: var(--vaadin-charts-color-6-2);
+    color: var(--vaadin-charts-color-6-2);
+}
+
+.tree-name-color-7::before {
+  background: var(--vaadin-charts-color-7);
+  color: var(--vaadin-charts-color-7);
+}
+
+.tree-name-color-7-0::before {
+    background: var(--vaadin-charts-color-7-0);
+    color: var(--vaadin-charts-color-7-0);
+}
+
+.tree-name-color-7-1::before {
+    background: var(--vaadin-charts-color-7-1);
+    color: var(--vaadin-charts-color-7-1);
+}
+
+.tree-name-color-7-2::before {
+    background: var(--vaadin-charts-color-7-2);
+    color: var(--vaadin-charts-color-7-2);
+}
+
+.tree-name-color-8::before {
+  background: var(--vaadin-charts-color-8);
+  color: var(--vaadin-charts-color-8);
+}
+
+.tree-name-color-8-0::before {
+    background: var(--vaadin-charts-color-8-0);
+    color: var(--vaadin-charts-color-8-0);
+}
+
+.tree-name-color-8-1::before {
+    background: var(--vaadin-charts-color-8-1);
+    color: var(--vaadin-charts-color-8-1);
+}
+
+.tree-name-color-8-2::before {
+    background: var(--vaadin-charts-color-8-2);
+    color: var(--vaadin-charts-color-8-2);
+}
+
+.tree-name-color-9::before {
+  background: var(--vaadin-charts-color-9);
+  color: var(--vaadin-charts-color-9);
+}
+
+.tree-name-color-9-0::before {
+    background: var(--vaadin-charts-color-9-0);
+    color: var(--vaadin-charts-color-9-0);
+}
+
+.tree-name-color-9-1::before {
+    background: var(--vaadin-charts-color-9-1);
+    color: var(--vaadin-charts-color-9-1);
+}
+
+.tree-name-color-9-2::before {
+    background: var(--vaadin-charts-color-9-2);
+    color: var(--vaadin-charts-color-9-2);
+}

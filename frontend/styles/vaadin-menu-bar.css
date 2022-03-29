@@ -1,0 +1,32 @@
+@import "material-icons.css";
+
+.menu-item-icon-only span {
+    border-width: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+vaadin-menu-bar-button[focused] > vaadin-context-menu-item > .fake-tooltip-wrapper .fake-tooltip,
+vaadin-menu-bar-button:hover > vaadin-context-menu-item > .fake-tooltip-wrapper .fake-tooltip,
+.fake-tooltip-wrapper:hover .fake-tooltip {
+    opacity: 1;
+}
+
+.fake-tooltip-wrapper .fake-tooltip {
+    opacity: 0;
+    transition: 500ms;
+    pointer-events: none;
+    position: fixed;
+    font-size: var(--lumo-font-size-xs);
+    color: var(--lumo-body-text-color);
+    border-radius: var(--lumo-border-radius);
+    background-color: var(--lumo-base-color);
+    padding: calc(var(--lumo-size-m) / 6) calc(var(--lumo-size-m) / 4);
+    box-shadow: 0 1px 4px -1px var(--lumo-shade-20pct);
+}

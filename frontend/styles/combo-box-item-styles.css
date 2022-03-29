@@ -1,0 +1,10 @@
+.add-new-item {
+	color: var(--lumo-primary-text-color);
+	padding: var(--lumo-space-s) 0;
+}
+.add-new-item::before {
+	content: var(--lumo-icons-plus);
+    font-family: lumo-icons, 'Material Icons Outlined';
+    vertical-align: middle;
+    line-height: 1;
+}

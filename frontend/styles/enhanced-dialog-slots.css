@@ -1,0 +1,28 @@
+/* Styles in public scope for Enhanced Dialog */
+.enhanced-dialog-header > *,
+.enhanced-dialog-content > * {
+  margin: 0;
+}
+
+.enhanced-dialog-content {
+  position: relative;
+}
+
+.enhanced-dialog-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.enhanced-dialog-footer vaadin-button:not(:first-child) {
+  margin-left: var(--lumo-space-s);
+}
+
+vcf-enhanced-dialog-overlay[theme="lookup-dialog"] .enhanced-dialog-footer {
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+}
+
+vcf-enhanced-dialog-overlay[theme="lookup-dialog"] .enhanced-dialog-footer vaadin-button:not(:first-child) {
+  margin-left: 0;
+  margin-right: var(--lumo-space-s);
+}
