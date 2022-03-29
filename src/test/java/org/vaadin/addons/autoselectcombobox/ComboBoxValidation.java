@@ -10,7 +10,7 @@ import com.vaadin.flow.router.Route;
 
 
 @PageTitle("ComboBox validation")
-@Route("comboboxvalidation")
+@Route("")
 public class ComboBoxValidation extends AbstractDemo {
 
     private PersonService personService;
