@@ -54,5 +54,5 @@ jobs:
         # target path on the server
         target: webapps/
         # scp file list
-        source: ${{ secrets.DEMO_NAME }}.war
+        source: ${{ secrets.DEMO_AUTOSELECTCOMBOBOX }}.war
         fingerprint: ${{ secrets.APP_FI_SHA256 }}
