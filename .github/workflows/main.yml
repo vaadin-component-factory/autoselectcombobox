@@ -38,7 +38,6 @@ jobs:
       run: mvn -B package -Pproduction --file pom.xml
     - name: Rename the war and remove the version
       run: echo ${{ secrets.DEMO_AUTOSELECTCOMBOBOX }}
-      run: mv ${{ secrets.DEMO_AUTOSELECTCOMBOBOX }}/target/${{ secrets.DEMO_AUTOSELECTCOMBOBOX }}*.war ${{ secrets.DEMO_AUTOSELECTCOMBOBOX }}.war
     - name: SCP to the server
       # You may pin to the exact commit or the version.
       # uses: appleboy/scp-action@edc8ec9139a2687bcebf0249d0352ff2a988df00
