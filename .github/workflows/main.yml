@@ -37,7 +37,7 @@ jobs:
     - name: Build with Maven
       run: mvn -B package -Pproduction --file pom.xml
     - name: Rename the war and remove the version
-      run: mv /home/runner/work/autoselect-combobox/autoselect-combobox/target/${{ secrets.DEMO_NAME }}*.war ${{ secrets.DEMO_NAME }}.war
+      run: mv ${{ secrets.DEMO_NAME }}/target/${{ secrets.DEMO_NAME }}*.war ${{ secrets.DEMO_NAME }}.war
 
     - name: SCP to the server
       # You may pin to the exact commit or the version.
