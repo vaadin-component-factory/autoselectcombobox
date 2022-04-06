@@ -15,6 +15,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <flow.version>2.7.13</flow.version>
+        <jetty.version>9.4.28.v20200408</jetty.version>
     </properties>
     <organization>
         <name>Vaadin Ltd.</name>
