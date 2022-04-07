@@ -5,7 +5,6 @@
     <artifactId>autoselectcombobox</artifactId>
     <version>1.0.0</version>
     <name>AutoSelectComboBox</name>
-    <description>Integration of auto-select combobox for Vaadin platform</description>
     <packaging>war</packaging>
     <properties>
         <vaadin.version>14.8.6</vaadin.version>
