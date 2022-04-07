@@ -55,5 +55,5 @@ jobs:
         # target path on the server
         target: webapps/
         # scp file list
-        source: autoselectcombobox.war
+        source: ${{ secrets.DEMP_AUTOSELECTCOMBOBOX }}.war
         fingerprint: ${{ secrets.APP_FI_SHA256 }}
