@@ -1,8 +1,0 @@
-[part="items"] ::slotted(.vaadin-menu-item[theme~="primary"]) {
-    color: var(--lumo-primary-text-color);
-}
-
-[part="items"] ::slotted(.vaadin-menu-item[theme~="custom-style"]) {
-    color: white;
-    background: linear-gradient(#e66465, #9198e5);
-}

@@ -1,9 +1,0 @@
-vaadin-tab a iron-icon {
-    padding: 0 var(--lumo-space-xs);
-    width: var(--lumo-space-m);
-    height: var(--lumo-space-m);
-}
-
-vaadin-tab .material-icons {
-    font-family: var(--synneo-material-icon-font);
-}
