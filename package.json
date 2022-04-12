@@ -1,4 +1,6 @@
 {
+  "name": "no-name",
+  "license": "UNLICENSED",
   "dependencies": {
     "@polymer/iron-a11y-announcer": "3.0.2",
     "@polymer/iron-a11y-keys-behavior": "3.0.1",
@@ -13,6 +15,7 @@
     "@polymer/iron-resizable-behavior": "3.0.1",
     "@polymer/iron-scroll-target-behavior": "3.0.1",
     "@polymer/polymer": "3.2.0",
+    "@vaadin-component-factory/vcf-auto-select-combobox": "14.8.7",
     "@vaadin/vaadin-accordion": "1.2.0",
     "@vaadin/vaadin-app-layout": "2.2.0",
     "@vaadin/vaadin-avatar": "1.0.4",
@@ -87,8 +90,6 @@
     "webpack-dev-server": "3.11.0",
     "webpack-merge": "4.2.2"
   },
-  "license": "UNLICENSED",
-  "name": "no-name",
   "vaadin": {
     "dependencies": {
       "@polymer/iron-a11y-announcer": "3.0.2",
@@ -104,6 +105,7 @@
       "@polymer/iron-resizable-behavior": "3.0.1",
       "@polymer/iron-scroll-target-behavior": "3.0.1",
       "@polymer/polymer": "3.2.0",
+      "@vaadin-component-factory/vcf-auto-select-combobox": "14.8.7",
       "@vaadin/vaadin-accordion": "1.2.0",
       "@vaadin/vaadin-app-layout": "2.2.0",
       "@vaadin/vaadin-avatar": "1.0.4",
@@ -178,6 +180,6 @@
       "webpack-dev-server": "3.11.0",
       "webpack-merge": "4.2.2"
     },
-    "hash": "d00a0d550dc67afc6288d59eecb71e6dabb1582043ebd8f9e87b878aa03d910e"
+    "hash": "25906e8f46c0b87e55e375f3e930017783c6a4a5b4965b9d34d9ce6127350c30"
   }
 }
