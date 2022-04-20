@@ -9,5 +9,8 @@
         <module name="autoselectcombobox" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="autoselectcombobox-demo" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>
