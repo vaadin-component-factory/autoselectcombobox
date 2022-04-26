@@ -1,4 +1,4 @@
-package org.vaadin.addons.autoselectcombobox;
+package org.vaadin.addons.demo;
 
 import java.util.Objects;
 import java.util.stream.Stream;

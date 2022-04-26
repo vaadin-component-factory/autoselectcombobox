@@ -1,6 +1,6 @@
-package org.vaadin.addons.autoselectcombobox;
+package org.vaadin.addons.demo.data;
 
-public class TestBean {
+public class DemoBean {
 
     private Person person;
 

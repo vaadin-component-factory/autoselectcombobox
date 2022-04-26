@@ -1,4 +1,4 @@
-package org.vaadin.addons.autoselectcombobox;
+package org.vaadin.addons.demo.data;
 
 public class Address {
     private String street;

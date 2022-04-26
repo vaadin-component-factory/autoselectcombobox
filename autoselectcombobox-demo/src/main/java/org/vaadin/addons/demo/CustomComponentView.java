@@ -1,22 +1,26 @@
-package org.vaadin.addons.autoselectcombobox;
+package org.vaadin.addons.demo;
 
 import com.vaadin.flow.component.combobox.ComboBox;
 import com.vaadin.flow.component.html.Anchor;
+import com.vaadin.flow.component.html.Div;
+import com.vaadin.flow.component.html.Span;
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.data.binder.Binder;
 import com.vaadin.flow.data.binder.Validator;
 import com.vaadin.flow.data.provider.DataProvider;
-import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
+import org.vaadin.addons.AutoSelectComboBox;
+import org.vaadin.addons.demo.data.PersonService;
+import org.vaadin.addons.demo.data.DemoBean;
+import org.vaadin.addons.demo.data.Person;
 
-
-@PageTitle("ComboBox validation")
 @Route("")
-public class ComboBoxValidation extends AbstractDemo {
+public class CustomComponentView extends Div {
 
     private PersonService personService;
 
-    @Override
-    protected void initView() {
+    public CustomComponentView() {
+        super();
         personService = new PersonService(300);
         addComboValidation();
     }
@@ -48,16 +52,22 @@ public class ComboBoxValidation extends AbstractDemo {
         asComboBox.setDataProvider(dataProvider);
         asComboBox.setItemLabelGenerator(Person::toString);
 
-        Binder<TestBean> binder = new Binder<>();
+        Binder<DemoBean> binder = new Binder<>();
         binder.forField(comboBox)
                 .asRequired(Validator.from(personService::exists, "Please select one of the available values"))
-                .bind(TestBean::getPerson, TestBean::setPerson);
+                .bind(DemoBean::getPerson, DemoBean::setPerson);
 
-        TestBean item = new TestBean();
+        DemoBean item = new DemoBean();
         binder.setBean(item);
         // end-source-example
 
-        addCard("ComboBox with autoselect and validation", comboBoxDefault, comboBox, asComboBox, new Anchor("#", "Focus target for testing"));
+        add(new VerticalLayout(
+                new Span("ComboBox with autoselect and validation"),
+                comboBoxDefault,
+                comboBox,
+                asComboBox,
+                new Anchor("#", "Focus target for testing")
+        ));
     }
 
     private Person buildEmptyPerson() {
