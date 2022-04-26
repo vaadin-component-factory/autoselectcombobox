@@ -4,3 +4,7 @@
 package-lock.json
 analysis.json
 /next/
+**/.idea
+**/target
+**/node_modules
+**/*.iml
