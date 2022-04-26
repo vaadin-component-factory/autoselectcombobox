@@ -13,5 +13,4 @@ public class Application extends SpringBootServletInitializer {
     public static void main(String[] args) {
         LaunchUtil.launchBrowserInDevelopmentMode(SpringApplication.run(Application.class, args));
     }
-
 }

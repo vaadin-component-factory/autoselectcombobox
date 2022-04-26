@@ -9,7 +9,7 @@ import com.vaadin.flow.data.binder.Binder;
 import com.vaadin.flow.data.binder.Validator;
 import com.vaadin.flow.data.provider.DataProvider;
 import com.vaadin.flow.router.Route;
-import org.vaadin.addons.AutoSelectComboBox;
+import org.vaadin.addons.autoselectcombobox.AutoSelectComboBox;
 import org.vaadin.addons.demo.data.PersonService;
 import org.vaadin.addons.demo.data.DemoBean;
 import org.vaadin.addons.demo.data.Person;
