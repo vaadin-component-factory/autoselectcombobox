@@ -4,7 +4,7 @@
   <groupId>org.vaadin.addons.componentfactory</groupId>
   <artifactId>autoselectcombobox-root</artifactId>
   <packaging>pom</packaging>
-  <version>1.0.2</version>
+  <version>1.0.3</version>
   <modules>
     <module>autoselectcombobox</module>
     <module>autoselectcombobox-demo</module>
