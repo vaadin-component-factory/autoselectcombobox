@@ -7,7 +7,7 @@ class AutoSelectComboBoxElement extends ComboBoxElement {
   }
 
   static get is() {
-    return 'autoselect-combo-box';
+    return 'vcf-autoselect-combo-box';
   }
 
   ready() {
