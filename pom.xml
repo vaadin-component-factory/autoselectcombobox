@@ -1,88 +1,89 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>org.vaadin.addons.componentfactory</groupId>
-  <artifactId>autoselectcombobox-root</artifactId>
-  <packaging>pom</packaging>
-  <version>2.0.0</version>
-  <modules>
-    <module>autoselectcombobox</module>
-    <module>autoselectcombobox-demo</module>
-  </modules>
-  <name>autoselectcombobox-root</name>
-  <url>http://maven.apache.org</url>
-  <properties>
-    <vaadin.version>14.8.6</vaadin.version>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.vaadin.addons.componentfactory</groupId>
+	<artifactId>autoselectcombobox-root</artifactId>
+	<packaging>pom</packaging>
+	<version>2.0.0</version>
+	<modules>
+		<module>autoselectcombobox</module>
+		<module>autoselectcombobox-demo</module>
+	</modules>
+	<name>autoselectcombobox-root</name>
+	<url>http://maven.apache.org</url>
+	<properties>
+		<vaadin.version>23.1.2</vaadin.version>
 
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <flow.version>2.7.13</flow.version>
-    <jetty.version>9.4.28.v20200408</jetty.version>
-  </properties>
-  <organization>
-    <name>Vaadin Ltd</name>
-    <url>https://vaadin.com/</url>
-  </organization>
-  <licenses>
-    <license>
-      <name>Apache 2</name>
-      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-      <distribution>repo</distribution>
-    </license>
-  </licenses>
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>com.vaadin</groupId>
-        <artifactId>vaadin-bom</artifactId>
-        <type>pom</type>
-        <scope>import</scope>
-        <version>${vaadin.version}</version>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
-  <repositories>
-    <repository>
-      <id>central</id>
-      <url>https://repo.maven.apache.org/maven2</url>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </repository>
-    <repository>
-      <id>Vaadin Directory</id>
-      <url>https://maven.vaadin.com/vaadin-addons</url>
-    </repository>
-    <!-- Repository needed for prerelease versions of Vaadin -->
-    <repository>
-      <id>Vaadin prereleases</id>
-      <url>https://maven.vaadin.com/vaadin-prereleases</url>
-    </repository>
-    <!-- Repository needed for the snapshot versions of Vaadin -->
-    <repository>
-      <id>vaadin-snapshots</id>
-      <url>https://oss.sonatype.org/content/repositories/vaadin-snapshots/</url>
-    </repository>
-  </repositories>
-  <pluginRepositories>
-    <pluginRepository>
-      <id>central</id>
-      <url>https://repo.maven.apache.org/maven2</url>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </pluginRepository>
-    <!-- Repository needed for prerelease versions of Vaadin -->
-    <pluginRepository>
-      <id>Vaadin prereleases</id>
-      <url>https://maven.vaadin.com/vaadin-prereleases</url>
-    </pluginRepository>
-    <pluginRepository>
-      <id>vaadin-snapshots</id>
-      <url>https://oss.sonatype.org/content/repositories/vaadin-snapshots/</url>
-      <releases><enabled>false</enabled></releases>
-    </pluginRepository>
-  </pluginRepositories>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<flow.version>2.7.13</flow.version>
+		<jetty.version>9.4.28.v20200408</jetty.version>
+	</properties>
+	<organization>
+		<name>Vaadin Ltd</name>
+		<url>https://vaadin.com/</url>
+	</organization>
+	<licenses>
+		<license>
+			<name>Apache 2</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.vaadin</groupId>
+				<artifactId>vaadin-bom</artifactId>
+				<type>pom</type>
+				<scope>import</scope>
+				<version>${vaadin.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<repositories>
+		<repository>
+			<id>central</id>
+			<url>https://repo.maven.apache.org/maven2</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>Vaadin Directory</id>
+			<url>https://maven.vaadin.com/vaadin-addons</url>
+		</repository>
+		<!-- Repository needed for prerelease versions of Vaadin -->
+		<repository>
+			<id>Vaadin prereleases</id>
+			<url>https://maven.vaadin.com/vaadin-prereleases</url>
+		</repository>
+		<!-- Repository needed for the snapshot versions of Vaadin -->
+		<repository>
+			<id>vaadin-snapshots</id>
+			<url>https://oss.sonatype.org/content/repositories/vaadin-snapshots/</url>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>central</id>
+			<url>https://repo.maven.apache.org/maven2</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+		<!-- Repository needed for prerelease versions of Vaadin -->
+		<pluginRepository>
+			<id>Vaadin prereleases</id>
+			<url>https://maven.vaadin.com/vaadin-prereleases</url>
+		</pluginRepository>
+		<pluginRepository>
+			<id>vaadin-snapshots</id>
+			<url>https://oss.sonatype.org/content/repositories/vaadin-snapshots/</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+		</pluginRepository>
+	</pluginRepositories>
 </project>
