@@ -3,7 +3,7 @@
 
     <groupId>org.vaadin.addons.componentfactory</groupId>
     <artifactId>autoselectcombobox</artifactId>
-    <version>2.0.0</version>
+    <version>3.0.0</version>
     <name>AutoSelectComboBox</name>
     <packaging>jar</packaging>
     <properties>
