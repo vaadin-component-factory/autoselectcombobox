@@ -11,14 +11,12 @@
 	<name>autoselectcombobox-root</name>
 	<url>http://maven.apache.org</url>
 	<properties>
-		<vaadin.version>23.1.2</vaadin.version>
+		<vaadin.version>23.2.0</vaadin.version>
 
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>11</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<flow.version>2.7.13</flow.version>
-		<jetty.version>9.4.28.v20200408</jetty.version>
 	</properties>
 	<organization>
 		<name>Vaadin Ltd</name>
