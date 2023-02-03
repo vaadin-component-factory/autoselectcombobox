@@ -70,10 +70,6 @@ public class ComboBoxValidation extends AbstractDemo {
                 null, "1223"));
         asComboBox2.setClearButtonVisible(true);
         asComboBox2.setItemLabelGenerator(Person::toString);
-        asComboBox2.addValueChangeListener(e -> {
-            System.out.println("asComboBox2 value change to " + e.getValue());
-        });
-
         addCard("ComboBox with autoselect and validation", comboBoxDefault, comboBox, asComboBox, asComboBox2, new Anchor("#", "Focus target for testing"));
     }
 
