@@ -34,28 +34,26 @@ public class ComboBoxValidation extends AbstractDemo {
 
         // begin-source-example
         // source-example-heading: ComboBox with autoselect and validation
-        ComboBox<Person> comboBox = new ComboBox<>("People");
-        comboBox.setHelperText("Auto select if 1 option. Allow custom values + run validation against options.");
-        comboBox.setItemLabelGenerator(Person::toString);
-        comboBox.setDataProvider(dataProvider);
+        ComboBox<Person> comboBoxWithEnhancer = new ComboBox<>("ComboBoxEnhancer");
+        comboBoxWithEnhancer.setHelperText("Auto select if 1 option. Allow custom values + run validation against options.");
+        comboBoxWithEnhancer.setItemLabelGenerator(Person::toString);
+        comboBoxWithEnhancer.setDataProvider(dataProvider);
 
-        new ComboBoxEnhancer<>(comboBox).enableAutoSelect(buildEmptyPerson(), (displayValue, emptyValue) -> {
+        new ComboBoxEnhancer<>(comboBoxWithEnhancer).enableAutoSelect(buildEmptyPerson(), (displayValue, emptyValue) -> {
             emptyValue.setFirstName(displayValue);
             return emptyValue;
         }, filter -> personService.fetch(0, Integer.MAX_VALUE, filter).stream());
 
-        AutoSelectComboBox<Person> asComboBox = new AutoSelectComboBox<>("Another People");
-        asComboBox.setHelperText("Custom Web Component. Auto select if 1 option. Allow custom values + run validation against options.");
-        asComboBox.setDataProvider(dataProvider);
-        asComboBox.setItemLabelGenerator(Person::toString);
-        asComboBox.setClearButtonVisible(true);
-        asComboBox.addValueChangeListener(e -> {
+        AutoSelectComboBox<Person> asComboBoxMultiItems = new AutoSelectComboBox<>("Autoselect with 1 item");
+        asComboBoxMultiItems.setHelperText("Custom Web Component. Auto select if 1 option. Allow custom values + run validation against options.");
+        asComboBoxMultiItems.setDataProvider(dataProvider);
+        asComboBoxMultiItems.setItemLabelGenerator(Person::toString);
+        asComboBoxMultiItems.setClearButtonVisible(true);
+        asComboBoxMultiItems.addValueChangeListener(e -> {
             System.out.println("asComboBox value change to " + e.getValue());
         });
-        Grid<String> grid = new Grid<>();
-        grid.getDataCommunicator();
         Binder<TestBean> binder = new Binder<>();
-        binder.forField(comboBox)
+        binder.forField(comboBoxWithEnhancer)
                 .asRequired(Validator.from(personService::exists, "Please select one of the available values"))
                 .bind(TestBean::getPerson, TestBean::setPerson);
 
@@ -63,14 +61,14 @@ public class ComboBoxValidation extends AbstractDemo {
         binder.setBean(item);
         // end-source-example
 
-        AutoSelectComboBox<Person> asComboBox2 = new AutoSelectComboBox<>("2 People");
-        asComboBox2.setHelperText("Custom Web Component. Auto select if 1 option. Allow custom values + run validation against options.");
-        asComboBox2.setItems(new Person(1, "first", "last", 22,
+        AutoSelectComboBox<Person> asComboBoxTwoItems = new AutoSelectComboBox<>("AutoSelect with 2 items");
+        asComboBoxTwoItems.setHelperText("Custom Web Component. Auto select if 1 option. Allow custom values + run validation against options.");
+        asComboBoxTwoItems.setItems(new Person(1, "first", "last", 22,
         null, "123"), new Person(2, "firs2t", "l2ast", 32,
                 null, "1223"));
-        asComboBox2.setClearButtonVisible(true);
-        asComboBox2.setItemLabelGenerator(Person::toString);
-        addCard("ComboBox with autoselect and validation", comboBoxDefault, comboBox, asComboBox, asComboBox2, new Anchor("#", "Focus target for testing"));
+        asComboBoxTwoItems.setClearButtonVisible(true);
+        asComboBoxTwoItems.setItemLabelGenerator(Person::toString);
+        addCard("ComboBox with autoselect and validation", comboBoxDefault, comboBoxWithEnhancer, asComboBoxMultiItems, asComboBoxTwoItems, new Anchor("#", "Focus target for testing"));
     }
 
     private Person buildEmptyPerson() {
