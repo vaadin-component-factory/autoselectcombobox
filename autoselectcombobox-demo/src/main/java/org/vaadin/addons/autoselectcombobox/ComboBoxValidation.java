@@ -1,7 +1,6 @@
 package org.vaadin.addons.autoselectcombobox;
 
 import com.vaadin.flow.component.combobox.ComboBox;
-import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.html.Anchor;
 import com.vaadin.flow.data.binder.Binder;
 import com.vaadin.flow.data.binder.Validator;
@@ -29,7 +28,7 @@ public class ComboBoxValidation extends AbstractDemo {
 
         ComboBox<Person> comboBoxDefault = new ComboBox<>("People");
         comboBoxDefault.setHelperText("Default behaviour");
-        comboBoxDefault.setDataProvider(dataProvider);
+        comboBoxDefault.setItems(dataProvider);
         comboBoxDefault.setItemLabelGenerator(Person::toString);
 
         // begin-source-example
@@ -37,7 +36,7 @@ public class ComboBoxValidation extends AbstractDemo {
         ComboBox<Person> comboBoxWithEnhancer = new ComboBox<>("ComboBoxEnhancer");
         comboBoxWithEnhancer.setHelperText("Auto select if 1 option. Allow custom values + run validation against options.");
         comboBoxWithEnhancer.setItemLabelGenerator(Person::toString);
-        comboBoxWithEnhancer.setDataProvider(dataProvider);
+        comboBoxWithEnhancer.setItems(dataProvider);
 
         new ComboBoxEnhancer<>(comboBoxWithEnhancer).enableAutoSelect(buildEmptyPerson(), (displayValue, emptyValue) -> {
             emptyValue.setFirstName(displayValue);
@@ -46,7 +45,7 @@ public class ComboBoxValidation extends AbstractDemo {
 
         AutoSelectComboBox<Person> asComboBoxMultiItems = new AutoSelectComboBox<>("Autoselect with 1 item");
         asComboBoxMultiItems.setHelperText("Custom Web Component. Auto select if 1 option. Allow custom values + run validation against options.");
-        asComboBoxMultiItems.setDataProvider(dataProvider);
+        asComboBoxMultiItems.setItems(dataProvider);
         asComboBoxMultiItems.setItemLabelGenerator(Person::toString);
         asComboBoxMultiItems.setClearButtonVisible(true);
         asComboBoxMultiItems.addValueChangeListener(e -> {
