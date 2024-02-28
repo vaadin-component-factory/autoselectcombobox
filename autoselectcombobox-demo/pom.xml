@@ -6,7 +6,7 @@
 
     <groupId>org.vaadin.addons.componentfactory</groupId>
     <artifactId>autoselectcombobox-demo</artifactId>
-    <version>3.0.2</version>
+    <version>3.0.3</version>
 
     <name>Autoselect Combobox Demo</name>
     <packaging>war</packaging>
