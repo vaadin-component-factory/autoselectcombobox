@@ -8,8 +8,9 @@ import com.vaadin.flow.component.dependency.NpmPackage;
 import java.util.Collection;
 
 @Tag("vcf-auto-select-combo-box")
-@NpmPackage(value = "@vaadin-component-factory/vcf-auto-select-combobox", version="23.4.0")
+@NpmPackage(value = "@vaadin-component-factory/vcf-auto-select-combobox", version="24.0.3")
 @JsModule("@vaadin-component-factory/vcf-auto-select-combobox/src/vcf-auto-select-combobox.js")
+//@JsModule("vcf-auto-select-combobox.js")
 public class AutoSelectComboBox<T> extends ComboBox<T> {
 
     public AutoSelectComboBox() {

@@ -1,20 +1,20 @@
 package org.vaadin.addons.autoselectcombobox;
 
+import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.combobox.ComboBox;
-import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.html.Anchor;
+import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.data.binder.Binder;
 import com.vaadin.flow.data.binder.Validator;
 import com.vaadin.flow.data.provider.DataProvider;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
-
 @PageTitle("ComboBox validation")
 @Route("")
 public class ComboBoxValidation extends AbstractDemo {
 
-    private PersonService personService;
+    private org.vaadin.addons.autoselectcombobox.PersonService personService;
 
     @Override
     protected void initView() {
@@ -29,7 +29,7 @@ public class ComboBoxValidation extends AbstractDemo {
 
         ComboBox<Person> comboBoxDefault = new ComboBox<>("People");
         comboBoxDefault.setHelperText("Default behaviour");
-        comboBoxDefault.setDataProvider(dataProvider);
+        comboBoxDefault.setItems(dataProvider);
         comboBoxDefault.setItemLabelGenerator(Person::toString);
 
         // begin-source-example
@@ -37,7 +37,7 @@ public class ComboBoxValidation extends AbstractDemo {
         ComboBox<Person> comboBoxWithEnhancer = new ComboBox<>("ComboBoxEnhancer");
         comboBoxWithEnhancer.setHelperText("Auto select if 1 option. Allow custom values + run validation against options.");
         comboBoxWithEnhancer.setItemLabelGenerator(Person::toString);
-        comboBoxWithEnhancer.setDataProvider(dataProvider);
+        comboBoxWithEnhancer.setItems(dataProvider);
 
         new ComboBoxEnhancer<>(comboBoxWithEnhancer).enableAutoSelect(buildEmptyPerson(), (displayValue, emptyValue) -> {
             emptyValue.setFirstName(displayValue);
@@ -46,7 +46,7 @@ public class ComboBoxValidation extends AbstractDemo {
 
         AutoSelectComboBox<Person> asComboBoxMultiItems = new AutoSelectComboBox<>("Autoselect with 1 item");
         asComboBoxMultiItems.setHelperText("Custom Web Component. Auto select if 1 option. Allow custom values + run validation against options.");
-        asComboBoxMultiItems.setDataProvider(dataProvider);
+        asComboBoxMultiItems.setItems(dataProvider);
         asComboBoxMultiItems.setItemLabelGenerator(Person::toString);
         asComboBoxMultiItems.setClearButtonVisible(true);
         asComboBoxMultiItems.addValueChangeListener(e -> {
@@ -59,16 +59,29 @@ public class ComboBoxValidation extends AbstractDemo {
 
         TestBean item = new TestBean();
         binder.setBean(item);
-        // end-source-example
+
 
         AutoSelectComboBox<Person> asComboBoxTwoItems = new AutoSelectComboBox<>("AutoSelect with 2 items");
         asComboBoxTwoItems.setHelperText("Custom Web Component. Auto select if 1 option. Allow custom values + run validation against options.");
-        asComboBoxTwoItems.setItems(new Person(1, "first", "last", 22,
-        null, "123"), new Person(2, "firs2t", "l2ast", 32,
+        asComboBoxTwoItems.setItems(new Person(1, "Aaron", "Allen", 22,
+                null, "123"), new Person(2, "Benjamin", "Brick  ", 32,
                 null, "1223"));
         asComboBoxTwoItems.setClearButtonVisible(true);
         asComboBoxTwoItems.setItemLabelGenerator(Person::toString);
-        addCard("ComboBox with autoselect and validation", comboBoxDefault, comboBoxWithEnhancer, asComboBoxMultiItems, asComboBoxTwoItems, new Anchor("#", "Focus target for testing"));
+
+        AutoSelectComboBox<String> asComboBoxReadOnly = new AutoSelectComboBox<>("Read-only");
+        asComboBoxReadOnly.setItems("Foo", "Bar", "Baz");
+        asComboBoxReadOnly.setValue("Bar");
+        asComboBoxReadOnly.setClearButtonVisible(true);
+        asComboBoxReadOnly.setReadOnly(true);
+        asComboBoxReadOnly.addValueChangeListener(e -> Notification.show("New value: " + e.getValue()));
+
+        Button button = new Button("Check value", e -> {
+            Notification.show(asComboBoxReadOnly.getValue());
+        });
+
+        // end-source-example
+        addCard("ComboBox with autoselect and validation", comboBoxDefault, comboBoxWithEnhancer, asComboBoxMultiItems, asComboBoxTwoItems, asComboBoxReadOnly, new Anchor("#", "Focus target for testing"), button);
     }
 
     private Person buildEmptyPerson() {
