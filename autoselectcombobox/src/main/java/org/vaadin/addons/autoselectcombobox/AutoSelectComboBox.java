@@ -8,7 +8,7 @@ import com.vaadin.flow.component.dependency.NpmPackage;
 import java.util.Collection;
 
 @Tag("vcf-auto-select-combo-box")
-@NpmPackage(value = "@vaadin-component-factory/vcf-auto-select-combobox", version="24.0.3")
+@NpmPackage(value = "@vaadin-component-factory/vcf-auto-select-combobox", version="24.0.4")
 @JsModule("@vaadin-component-factory/vcf-auto-select-combobox/src/vcf-auto-select-combobox.js")
 //@JsModule("vcf-auto-select-combobox.js")
 public class AutoSelectComboBox<T> extends ComboBox<T> {
@@ -33,4 +33,9 @@ public class AutoSelectComboBox<T> extends ComboBox<T> {
         super(label);
     }
 
+
+    @Override
+    public void setInvalid(boolean invalid) {
+        getElement().setProperty("invalidExternal", invalid);
+    }
 }

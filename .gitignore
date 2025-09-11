@@ -31,8 +31,10 @@ hs_err_pid*
 
 node
 node_modules
+/autoselectcombobox-demo/frontend/generated/
 package-lock.json
 package.json
 webpack.config.js
 webpack.generated.js
+vite.generated.ts
 
