@@ -34,6 +34,7 @@ public class RequiredCombo extends AbstractDemo {
                 requiredAutoSelectComboBox(),
                 requiredWithInitialValueAutoSelectComboBox(),
                 requiredNormalComboBox(),
+                requiredWithInitialValueNormalComboBox(),
                 new Anchor("#", "Focus target for testing"));
     }
 
@@ -71,6 +72,16 @@ public class RequiredCombo extends AbstractDemo {
         combo.setRequired(true);
         combo.setI18n(new ComboBoxI18n()
                 .setRequiredErrorMessage("Field is required"));
+        return combo;
+    }
+
+    private ComboBox<String> requiredWithInitialValueNormalComboBox() {
+        ComboBox<String> combo = new ComboBox<>("Regular required");
+        combo.setItems("Bar", "Foo", "Baz", "Quizzle", "Quux", "Flim", "Flam", "Raquette", "Boslix", "Suppum", "Amliaum");
+        combo.setRequired(true);
+        combo.setI18n(new ComboBoxI18n()
+                .setRequiredErrorMessage("Field is required"));
+        combo.setValue("Foo");
         return combo;
     }
 
