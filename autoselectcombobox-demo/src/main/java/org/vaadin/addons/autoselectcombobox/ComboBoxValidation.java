@@ -78,7 +78,6 @@ public class ComboBoxValidation extends AbstractDemo {
                 null, "1223"));
         asComboBoxTwoItems.setClearButtonVisible(true);
         asComboBoxTwoItems.setItemLabelGenerator(Person::toString);
-        asComboBoxTwoItems.setAllowCustomValue(true);
         return asComboBoxTwoItems;
     }
 
