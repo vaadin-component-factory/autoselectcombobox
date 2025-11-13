@@ -6,7 +6,7 @@
 
     <groupId>org.vaadin.addons.componentfactory</groupId>
     <artifactId>autoselectcombobox-demo</artifactId>
-    <version>5.0.0</version>
+    <version>5.1.0</version>
 
     <name>Autoselect Combobox Demo</name>
     <packaging>war</packaging>
@@ -18,7 +18,7 @@
     </organization>
 
     <properties>
-        <vaadin.version>24.8.7</vaadin.version>
+        <vaadin.version>24.9.2</vaadin.version>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

@@ -2,8 +2,9 @@ package org.vaadin.addons.autoselectcombobox;
 
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.combobox.ComboBox;
-import com.vaadin.flow.component.grid.Grid;
+import com.vaadin.flow.component.dependency.Uses;
 import com.vaadin.flow.component.html.Anchor;
+import com.vaadin.flow.component.icon.Icon;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.data.binder.Binder;
 import com.vaadin.flow.data.binder.Result;
@@ -12,11 +13,14 @@ import com.vaadin.flow.data.binder.Validator;
 import com.vaadin.flow.data.binder.ValueContext;
 import com.vaadin.flow.data.converter.Converter;
 import com.vaadin.flow.data.provider.DataProvider;
+import com.vaadin.flow.router.Menu;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
-@PageTitle("ComboBox validation")
+@PageTitle("ComboBox Validation")
+@Menu(order = 1)
 @Route("")
+@Uses(Icon.class)
 public class ComboBoxValidation extends AbstractDemo {
 
     private org.vaadin.addons.autoselectcombobox.PersonService personService;
@@ -74,7 +78,6 @@ public class ComboBoxValidation extends AbstractDemo {
                 null, "1223"));
         asComboBoxTwoItems.setClearButtonVisible(true);
         asComboBoxTwoItems.setItemLabelGenerator(Person::toString);
-        asComboBoxTwoItems.setAllowCustomValue(true);
         return asComboBoxTwoItems;
     }
 
@@ -125,11 +128,22 @@ public class ComboBoxValidation extends AbstractDemo {
         return bindingCombo;
     }
 
+    private Person buildEmptyPerson() {
+        Person person = new Person();
+        person.setId(-1);
+        person.setFirstName("");
+        person.setLastName("");
+        return person;
+    }
+
     private class Choice {
+
+        private String chosenValue = "Bar";
 
         public Choice(String s) {
             chosenValue = s;
         }
+
         public String getChosenValue() {
             return chosenValue;
         }
@@ -138,11 +152,11 @@ public class ComboBoxValidation extends AbstractDemo {
             this.chosenValue = chosenValue;
         }
 
-        private String chosenValue = "Bar";
-
     }
 
     private class Holder {
+        Choice choice;
+
         public Choice getChoice() {
             return choice;
         }
@@ -150,16 +164,6 @@ public class ComboBoxValidation extends AbstractDemo {
         public void setChoice(Choice choice) {
             this.choice = choice;
         }
-
-        Choice choice;
-    }
-
-    private Person buildEmptyPerson() {
-        Person person = new Person();
-        person.setId(-1);
-        person.setFirstName("");
-        person.setLastName("");
-        return person;
     }
 
 }
