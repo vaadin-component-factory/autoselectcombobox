@@ -21,7 +21,7 @@ import com.vaadin.flow.router.Route;
 @Menu(order = 1)
 @Route("")
 @Uses(Icon.class)
-public class ComboBoxValidation extends AbstractDemo {
+public class ComboBoxValidationView extends AbstractDemo {
 
     private org.vaadin.addons.autoselectcombobox.PersonService personService;
 
@@ -48,6 +48,7 @@ public class ComboBoxValidation extends AbstractDemo {
                 comboBoxWithAutoFocus(), comboBoxWithBinderValidation(),
                 new Anchor("#", "Focus target for testing"), button);
     }
+
 
     private ComboBox<Person> regularComboBox(DataProvider<Person, String> dataProvider) {
         ComboBox<Person> comboBoxDefault = new ComboBox<>("People");

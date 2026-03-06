@@ -14,7 +14,7 @@ import com.vaadin.flow.router.Route;
 @PageTitle("Required Combo Box")
 @Menu(order = 2)
 @Route("Required")
-public class RequiredCombo extends AbstractDemo {
+public class RequiredComboView extends AbstractDemo {
 
     private PersonService personService;
 
