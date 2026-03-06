@@ -53,7 +53,7 @@ public class RequiredComboView extends AbstractDemo {
     }
 
     private Component requiredWithInitialValueAutoSelectComboBox() {
-        AutoSelectComboBox<String> requiredCombo = new AutoSelectComboBox<>("Autoselect Required");
+        AutoSelectComboBox<String> requiredCombo = new AutoSelectComboBox<>("Autoselect2 Required");
         requiredCombo.setItems("Bar", "Foo", "Baz", "Quizzle", "Quux", "Flim", "Flam", "Raquette", "Boslix", "Suppum", "Amliaum");
         requiredCombo.setRequired(true);
         requiredCombo.setValue("Foo");
@@ -76,7 +76,7 @@ public class RequiredComboView extends AbstractDemo {
     }
 
     private ComboBox<String> requiredWithInitialValueNormalComboBox() {
-        ComboBox<String> combo = new ComboBox<>("Regular required");
+        ComboBox<String> combo = new ComboBox<>("Regular2 required");
         combo.setItems("Bar", "Foo", "Baz", "Quizzle", "Quux", "Flim", "Flam", "Raquette", "Boslix", "Suppum", "Amliaum");
         combo.setRequired(true);
         combo.setI18n(new ComboBoxI18n()

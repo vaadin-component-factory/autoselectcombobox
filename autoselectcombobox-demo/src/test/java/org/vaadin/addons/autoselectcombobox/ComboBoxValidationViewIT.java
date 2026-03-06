@@ -27,7 +27,7 @@ public class ComboBoxValidationViewIT extends BasePlayWrightIT {
 
 
     @Test
-    public void testFocusAndBlurIsValid() {
+    public void testFocusAndBlurIsValidAutoSelect() {
         assertThat(page.getByRole(AriaRole.HEADING, new Page.GetByRoleOptions().setName("ComboBox Validation"))).isVisible();
         VaadinElement autoSelectComboBoxByLabel = VaadinElement.getAutoSelectComboBoxByLabel(page, "Autoselect with 1 item");
         assertThat(autoSelectComboBoxByLabel.getLocator()).isVisible();
@@ -37,5 +37,54 @@ public class ComboBoxValidationViewIT extends BasePlayWrightIT {
         VaadinElement autoSelect2ComboBoxByLabel = VaadinElement.getAutoSelectComboBoxByLabel(page, "Autoselect with 2 items");
         autoSelect2ComboBoxByLabel.focus();
         autoSelectComboBoxByLabel.assertValid();
+    }
+
+    @Test
+    public void testFocusAndBlurIsValidCombo() {
+        assertThat(page.getByRole(AriaRole.HEADING, new Page.GetByRoleOptions().setName("ComboBox Validation"))).isVisible();
+        VaadinElement comboBoxByLabel = VaadinElement.getComboBoxByLabel(page, "People");
+        assertThat(comboBoxByLabel.getLocator()).isVisible();
+        comboBoxByLabel.assertValid();
+        comboBoxByLabel.focus();
+
+        VaadinElement autoSelect2ComboBoxByLabel = VaadinElement.getAutoSelectComboBoxByLabel(page, "Autoselect with 2 items");
+        autoSelect2ComboBoxByLabel.focus();
+        comboBoxByLabel.assertValid();
+    }
+
+    @Test
+    public void testClearNonRequiredAutoSelectIsValid() {
+        assertThat(page.getByRole(AriaRole.HEADING, new Page.GetByRoleOptions().setName("ComboBox Validation"))).isVisible();
+        VaadinElement autoSelectComboBoxByLabel = VaadinElement.getAutoSelectComboBoxByLabel(page, "Autoselect with 1 item");
+        assertThat(autoSelectComboBoxByLabel.getLocator()).isVisible();
+        autoSelectComboBoxByLabel.assertValid();
+        autoSelectComboBoxByLabel.selectItem("Aaron Allen");
+
+        VaadinElement autoSelect2ComboBoxByLabel = VaadinElement.getAutoSelectComboBoxByLabel(page, "Autoselect with 2 items");
+        autoSelect2ComboBoxByLabel.focus();
+        autoSelectComboBoxByLabel.assertValue("Aaron Allen");
+        autoSelectComboBoxByLabel.assertValid();
+        autoSelectComboBoxByLabel.clickClearButton();
+        autoSelect2ComboBoxByLabel.focus();
+        autoSelectComboBoxByLabel.assertValue("");
+        autoSelectComboBoxByLabel.assertValid();
+    }
+
+    @Test
+    public void testClearNonRequiredComboboxIsValid() {
+        assertThat(page.getByRole(AriaRole.HEADING, new Page.GetByRoleOptions().setName("ComboBox Validation"))).isVisible();
+        VaadinElement comboBoxByLabel = VaadinElement.getComboBoxByLabel(page, "People");
+        assertThat(comboBoxByLabel.getLocator()).isVisible();
+        comboBoxByLabel.assertValid();
+        comboBoxByLabel.selectItem("Aaron Allen");
+
+        VaadinElement autoSelect2ComboBoxByLabel = VaadinElement.getAutoSelectComboBoxByLabel(page, "Autoselect with 2 items");
+        autoSelect2ComboBoxByLabel.focus();
+        comboBoxByLabel.assertValue("Aaron Allen");
+        comboBoxByLabel.assertValid();
+        comboBoxByLabel.clickClearButton();
+        autoSelect2ComboBoxByLabel.focus();
+        comboBoxByLabel.assertValue("");
+        comboBoxByLabel.assertValid();
     }
 }

@@ -1,5 +1,7 @@
 package org.vaadin.addons.autoselectcombobox;
 
+import java.util.Map;
+
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.AriaRole;
@@ -15,6 +17,10 @@ public class VaadinElement {
 
     public static VaadinElement getAutoSelectComboBoxByLabel(Page page, String label) {
         return getByLabel(page, "vcf-auto-select-combo-box", label);
+    }
+
+    public static VaadinElement getComboBoxByLabel(Page page, String label) {
+        return getByLabel(page, "vaadin-combo-box", label);
     }
 
     public static VaadinElement getByLabel(Page page, String tagName, String label) {
@@ -64,4 +70,40 @@ public class VaadinElement {
         getInputLocator().focus();
     }
 
+    /** Locator for the clear button ({@code part~=clear-button}). */
+    public Locator getClearButtonLocator() {
+        return getLocator().locator("[part~=\"clear-button\"]");
+    }
+
+    /** Click the clear button. */
+    public void clickClearButton() {
+        getClearButtonLocator().click();
+    }
+
+    /**
+     * Select an item by its visible label.
+     * Opens the overlay, clicks the matching item.
+     *
+     * @param item label of the item to select
+     */
+    public void selectItem(String item) {
+        open();
+        getOverlayItem(item).click();
+    }
+    /**
+     * Open the combo box overlay.
+     */
+    public void open() {
+        setProperty("opened", true);
+    }
+
+    private void setProperty(String name, Object value) {
+        locator.evaluate("(el, args) => el[args.name] = args.value", Map.of("name", name, "value", value));
+    }
+
+    private Locator getOverlayItem(String label) {
+        return getLocator().page().locator("vaadin-combo-box-item:not([hidden])")
+                .filter(new Locator.FilterOptions()
+                        .setHasText(label)).first();
+    }
 }

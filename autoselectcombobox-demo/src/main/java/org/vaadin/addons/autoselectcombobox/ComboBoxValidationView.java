@@ -55,6 +55,7 @@ public class ComboBoxValidationView extends AbstractDemo {
         comboBoxDefault.setHelperText("Default behaviour");
         comboBoxDefault.setItems(dataProvider);
         comboBoxDefault.setItemLabelGenerator(Person::toString);
+        comboBoxDefault.setClearButtonVisible(true);
         return comboBoxDefault;
     }
 

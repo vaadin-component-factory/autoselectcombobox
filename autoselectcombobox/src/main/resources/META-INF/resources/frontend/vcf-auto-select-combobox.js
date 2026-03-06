@@ -37,7 +37,6 @@ class AutoSelectComboBoxElement extends ComboBox {
     if (this.value === '') {
       this.dirty = false;
     } else {
-      debugger;
       this.dirty = true;
     }
     this.addEventListener('custom-value-set', this._onCustomValueSet);
@@ -51,7 +50,6 @@ class AutoSelectComboBoxElement extends ComboBox {
       } else {
         this._invalidInternal = false;
         if (e.detail.value !== '') {
-          debugger;
           this.dirty = true;
         }
       }
@@ -74,7 +72,6 @@ class AutoSelectComboBoxElement extends ComboBox {
       this._lastCommittedValue = this.value;
       // keep track of latest input label
       this.previousInputLabel = this._getItemLabel(this.selectedItem);
-      debugger;
       this.dirty = true;
     }
     this.checkValidity();
@@ -105,12 +102,11 @@ class AutoSelectComboBoxElement extends ComboBox {
   checkValidity() {
     let validity = super.checkValidity();
     // don't update the validity if it has not been updated
-    debugger;
     if (this.dirty) {
       if (!this.dirty && this.inputElement?.value === '' && this.required) {
         // if there are no changes (not dirty) and input is empty and element is required, it's valid
         validity = true;
-      } else if (!validity && this.inputElement?.value === '' && !this.required) {
+      } else if (this.inputElement?.value === '' && !this.required) {
         // if input is empty and element is not required, it's valid
         validity = true;
       } else if (!validity && this._filteredItemsContainFilterOrInputValue()) {

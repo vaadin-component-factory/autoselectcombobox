@@ -54,7 +54,7 @@ public class BasePlayWrightIT implements HasTestView {
         page.navigate(getUrl() + getView());
         page.waitForFunction(WAIT_FOR_VAADIN_SCRIPT);
         page.setDefaultNavigationTimeout(4000);
-        page.setDefaultTimeout(15000);
+        page.setDefaultTimeout(5000);
     }
 
     @AfterEach
