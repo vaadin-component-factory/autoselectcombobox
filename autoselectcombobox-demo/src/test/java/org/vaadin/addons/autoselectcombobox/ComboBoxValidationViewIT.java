@@ -87,4 +87,18 @@ public class ComboBoxValidationViewIT extends BasePlayWrightIT {
         comboBoxByLabel.assertValue("");
         comboBoxByLabel.assertValid();
     }
+/*
+    Test is not working because the setValue is broken
+    @Test
+    public void testWrongValueAutoSelectIsInvalid() {
+        assertThat(page.getByRole(AriaRole.HEADING, new Page.GetByRoleOptions().setName("ComboBox Validation"))).isVisible();
+        VaadinElement autoSelectComboBoxByLabel = VaadinElement.getAutoSelectComboBoxByLabel(page, "Autoselect with 1 item");
+        assertThat(autoSelectComboBoxByLabel.getLocator()).isVisible();
+        autoSelectComboBoxByLabel.assertValid();
+        autoSelectComboBoxByLabel.setValue("ABC");
+
+        VaadinElement autoSelect2ComboBoxByLabel = VaadinElement.getAutoSelectComboBoxByLabel(page, "Autoselect with 2 items");
+        autoSelect2ComboBoxByLabel.focus();
+        autoSelectComboBoxByLabel.assertInvalid();
+    }*/
 }
