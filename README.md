@@ -5,10 +5,12 @@
 
 Build the project and install the add-on locally:
 ```
-mvn clean install
+mvn clean install -DskipTests
 ```
-mvn jetty:run
 
+```
+mvn spring-boot:run
+```
 
 This deploys demo at http://localhost:8080
 
@@ -28,3 +30,16 @@ Create a new component AutoSelectComboBox and use it like a Combobox.
 ## Missing features or bugs
 
 You can report any issue or missing feature on github: https://github.com/vaadin-component-factory/autoselect-combobox
+
+
+## Testing 
+
+```
+mvn -Pit verify
+```
+
+If the tests are running in development mode, you might have a timeout because the bundle is building.
+You can run the application before (to build the dev bundle) or use the profile it to run it in production mode.
+
+
+The tests are written in Playwright and they are covering mostly 
