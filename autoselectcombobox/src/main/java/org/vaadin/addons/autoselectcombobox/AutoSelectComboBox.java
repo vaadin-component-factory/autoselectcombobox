@@ -52,6 +52,13 @@ public class AutoSelectComboBox<T> extends ComboBox<T> {
         getElement().setProperty("invalidExternal", invalid);
     }
 
+    /**
+     * The AutoSelectComboBox is using the custom value internally
+     * So the component does not support a custom value.
+     *
+     * @param allowCustomValue
+     */
+    @Deprecated
     @Override
     public void setAllowCustomValue(boolean allowCustomValue) {
         if (allowCustomValue) {
