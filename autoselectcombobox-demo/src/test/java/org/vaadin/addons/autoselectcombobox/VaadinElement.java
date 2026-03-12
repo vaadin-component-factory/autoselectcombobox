@@ -80,6 +80,22 @@ public class VaadinElement {
         getClearButtonLocator().click();
     }
 
+    /** Type text into the input field character by character (simulating real user input). */
+    public void type(String text) {
+        getInputLocator().click();
+        getInputLocator().pressSequentially(text);
+        // wait for the overlay to be sure it's properly opened
+        assertThat(locator.page().locator("vaadin-combo-box-overlay[opened]")).isVisible();
+    }
+
+    /** Clear the input field text by selecting all and deleting. */
+    public void clearInput() {
+        getInputLocator().click();
+        getInputLocator().clear();
+        // wait for the overlay to be sure it's properly opened
+        assertThat(locator.page().locator("vaadin-combo-box-overlay[opened]")).isVisible();
+    }
+
     /**
      * Select an item by its visible label.
      * Opens the overlay, clicks the matching item.
