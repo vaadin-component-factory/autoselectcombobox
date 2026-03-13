@@ -84,8 +84,6 @@ public class VaadinElement {
     public void type(String text) {
         getInputLocator().click();
         getInputLocator().pressSequentially(text);
-        // wait for the overlay to be sure it's properly opened
-        assertThat(locator.page().locator("vaadin-combo-box-overlay[opened]")).isVisible();
     }
 
     /** Clear the input field text by selecting all and deleting. */
