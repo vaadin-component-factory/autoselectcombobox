@@ -8,7 +8,7 @@ import com.vaadin.flow.component.dependency.NpmPackage;
 import java.util.Collection;
 
 @Tag("vcf-auto-select-combo-box")
-@NpmPackage(value = "@vaadin-component-factory/vcf-auto-select-combobox", version="24.1.4")
+@NpmPackage(value = "@vaadin-component-factory/vcf-auto-select-combobox", version="24.1.6")
 @JsModule("@vaadin-component-factory/vcf-auto-select-combobox/src/vcf-auto-select-combobox.js")
 //@JsModule("./vcf-auto-select-combobox.js")
 public class AutoSelectComboBox<T> extends ComboBox<T> {
@@ -52,6 +52,13 @@ public class AutoSelectComboBox<T> extends ComboBox<T> {
         getElement().setProperty("invalidExternal", invalid);
     }
 
+    /**
+     * The AutoSelectComboBox is using the custom value internally
+     * So the component does not support a custom value.
+     *
+     * @param allowCustomValue
+     */
+    @Deprecated
     @Override
     public void setAllowCustomValue(boolean allowCustomValue) {
         if (allowCustomValue) {
